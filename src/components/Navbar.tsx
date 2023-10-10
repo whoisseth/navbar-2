@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <main>
-      <nav className="flex justify-between px-8 items-center py-6   lg:px-24">
+      <nav className="flex justify-between px-8 items-center py-6   ">
         <div className="flex items-center gap-8">
           <section className="flex items-center gap-4">
             {/* menu */}
@@ -48,7 +48,11 @@ export default function Navbar() {
             </Link>
           </section>
           {navlinks.map((d, i) => (
-            <Link key={i} className=" text-gray-400 hover:text-black" href={d.link}>
+            <Link
+              key={i}
+              className="hidden lg:block  text-gray-400 hover:text-black"
+              href={d.link}
+            >
               {d.labe}
             </Link>
           ))}
@@ -89,7 +93,7 @@ export default function Navbar() {
           {/* avtar img */}
         </section>
       </nav>
-      <hr className=" lg:mx-24" />
+      <hr className=" " />
     </main>
   );
 }
